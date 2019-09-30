@@ -1,0 +1,32 @@
+locale: it_IT
+# feed and opengraph options
+title:          "Carlo Onofrio Gori"
+author:         "Carlo Onofrio Gori"
+description:    "Dedicato alla memoria di Carlo Onofrio Gori - bibliotecario, saggista, ricercatore e studioso di storia locale - questo sito si propone di raccoglierne l'opera, dispersa in innumerevoli pubblicazioni cartacee e telematiche, e organizzarla organicamente."
+tagline:        "Opera Letteraria"
+lang:           "it_IT"
+# default paths for images
+images:         /assets/img
+      
+defaults:    
+  - scope:
+      path: ""
+    values:
+      title:  "Carlo Onofrio Gori"
+      author: "Carlo Onofrio Gori"
+      description: "Dedicato alla memoria di Carlo Onofrio Gori, bibliotecario, saggista, ricercatore e studioso di storia locale, questo sito si propone di raccoglierne l'opera, dispersa in innumerevoli pubblicazioni cartacee e telematiche, e organizzarla organicamente."
+      layout: "cog"
+  - scope:
+      path: "_articoli"
+    values:
+      category: "articoli"
+
+collections:
+  articoli:
+    output: true
+  texts:
+    output: true
+theme: "ed."
+
+plugins:
+  - jekyll-sitemap

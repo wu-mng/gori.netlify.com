@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="page">
+  <p class="page-date"><small>
+    {% assign m = page.date | date: "%-m" %}
+      {{ page.date | date: "%-d" }}
+        {% case m %}
+            {% when '1' %}Gennaio
+            {% when '2' %}Febbraio
+            {% when '3' %}Marzo
+            {% when '4' %}Aprile
+            {% when '5' %}Maggio
+            {% when '6' %}Giugno
+            {% when '7' %}Luglio
+            {% when '8' %}Agosto
+            {% when '9' %}Settembre
+            {% when '10' %}Ottobre
+            {% when '11' %}Novembre
+            {% when '12' %}Dicembre
+        {% endcase %}
+      {{ page.date | date: "%Y" }} 
+  </small></p>
+  <div class="article-title">
+      <h1 class="page-title">
+        {{ page.title }}
+      </h1>
+      {% if page.subtitle %}
+        <h2 class="page-subtitle"> 
+          {{ page.subtitle }}
+        </h2>
+      {% endif %}
+  </div>
+  {% if page.image %}
+    <img src="{{ site.images }}/{{ page.image }}" class="featured-img" alt="{{ page.title }}" title="{{ page.title }}">
+  {% endif %}
+  {{ content }}
+  <!-- p class="citation"> {{ page.author }}</p -->
+
+
+  <div class="page-pub">
+    <p>Precedenti pubblicazioni:</p>
+      {% for entry in page.paper %}
+        <p class="footnotes"><small>- {{ entry }}</small></p>
+      {% endfor %}
+      {% for entry in page.web %}
+        <p class="footnotes"><small>- <a href="{{ entry }}">{{ entry }}</a></small></p>
+      {% endfor %}
+  </div>
+</div>

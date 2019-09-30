@@ -1,0 +1,8 @@
+<figure {% if include.class %} class="thumb-right" {% else %} class="thumb" {% endif %}>
+<a {% if include.href %} href="{{ include.href }}" {% else %} href="{{ site.images }}/{{ include.src }}" {% endif %}>
+<img src="{{ site.images }}/{{ include.src }}" {% if include.alt %} alt="{{ include.alt }}" {% else %} alt="{{ include.caption }}" {% endif %} 
+    {% if include.title %} title="{{ include.title }}" {% else %} title="{{ include.caption }}" {% endif %}>
+</a>    
+<figcaption>{{ include.caption }}</figcaption>
+</figure>
+

@@ -1,0 +1,180 @@
+---
+sitemap: false
+---
+
+
+/*
+  Common Variables
+
+  Feel free to change!
+*/
+
+/* FONTS */
+$main-font: 'Merriweather', "Palatino Linotype", "Book Antiqua", Palatino, Norasi, serif;
+$heading-font: 'Merriweather Sans', "Open Sans", FreeSans, sans-serif;
+$regular-font-size: 20px;
+
+
+/*
+  COLOR.
+
+  Make sure to leave color-scheme in config file empty for granular control
+*/
+
+$text-color: #454545;
+$heading-color: #404040;
+$link-color: #841212;
+
+/* 
+
+CUSTOM css
+
+*/
+
+/* Webfonts */
+
+/* merriweather-300 - latin */
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/merriweather-v21-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Light'), local('Merriweather-Light'),
+       url('../fonts/merriweather-v21-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-v21-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-v21-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-v21-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-v21-latin-300.svg#Merriweather') format('svg'); /* Legacy iOS */
+}
+
+
+/* merriweather-sans-300 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/merriweather-sans-v11-latin-300.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans Light'), local('MerriweatherSans-Light'),
+       url('../fonts/merriweather-sans-v11-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-sans-v11-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-sans-v11-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-sans-v11-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-sans-v11-latin-300.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+
+/* merriweather-sans-800 - latin */
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/merriweather-sans-v11-latin-800.eot'); /* IE9 Compat Modes */
+  src: local('Merriweather Sans ExtraBold'), local('MerriweatherSans-ExtraBold'),
+       url('../fonts/merriweather-sans-v11-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-sans-v11-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-sans-v11-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-sans-v11-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-sans-v11-latin-800.svg#MerriweatherSans') format('svg'); /* Legacy iOS */
+}
+
+#index.masthead { 
+    border: none;
+    margin: 4.8rem auto !important;
+    padding-bottom: 4.8rem !important;
+}
+#index .masthead-title { line-height: 1em; margin-bottom: .5rem !important; }
+#index h3.masthead-title { 
+    color: #841212;
+    font-size: 4.8rem !important;
+    text-transform: uppercase; 
+}
+
+.tagline { 
+    font-size: .88rem;
+    color: #454545;
+    letter-spacing: .05rem;
+    font-family: "Merriweather Sans", "Open Sans", FreeSans, sans-serif;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+
+.page-date { 
+    border-bottom: 1px solid #eee; 
+    /* color: #5a5b5b; */
+    font-family: $heading-font; 
+}
+.article-title { margin-bottom: 3rem !important; }
+.page-title { font-size: 2.1rem; font-weight: 800; }
+.page-title a { color: $heading-color !important; }
+.page-biblio, .page-notes { font-weight: 800; }
+.page-biblio, .page-notes, .page-pub { margin: 6rem 0 3rem; }
+.page-pub { 
+    border-top: 1px solid #eee;
+    font-family: $heading-font;  
+    margin: 6rem 0;
+    padding: 1rem 0;
+}
+
+.continue { font-weight: 800; margin: 2rem 0 6rem; }
+
+.profile-img { margin: auto; }
+
+.toc .featured-img { width: 150px; }
+.featured-img { 
+    border-radius: 0; 
+    float: left; 
+    margin: 0;
+    max-width: 33%;
+    padding: 0 1rem 0 0;
+}
+
+figure.thumb {
+    float: left; 
+    max-width: 33%;
+    margin-left: -2rem;
+}
+
+figure.thumb-right {
+    float: right; 
+    max-width: 33%;
+    margin-right: -2rem;
+    text-align: center;
+}
+
+figure.full { 
+    margin: 0;
+    padding: 2rem 1rem 2.5rem 0; 
+}
+
+figure img { 
+    margin: 0 0 0.5rem;
+    min-width: 100%;
+}
+
+figcaption { 
+    font-size: 0.8rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+}
+
+.sidebar { font-family: $heading-font !important; }
+#bio.sidebar-item { color: #efefef !important; }
+.sidebar-item h1 { 
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 1rem;
+}
+
+/* responsive */
+
+@media (max-width: 48em) {
+    h3.masthead-title {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    #index h3.masthead-title {
+        font-size: 3.6rem !important;
+    }
+}
+
+@import "ed";
+@import "syntax";
