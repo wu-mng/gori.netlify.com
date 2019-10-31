@@ -14,7 +14,7 @@
     {% if page.title == "Home" %}
       {{ site.title }}
     {% else %}
-      {{ page.title }}
+      {{ page.title }} - {{ page.subtitle }}
     {% endif %}
   </title>
 
@@ -28,7 +28,7 @@
   <meta property="dc:source" content="{% if page.source %}{{ page.source }}{% else %}{{ site.title }}{% endif %}" />
 
   <!-- Open Graph metadata -->
-  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:title" content="{{ page.title }} - {{ page.subtitle }}" />
   <meta name="author" content="{{ page.author }}" />
   <meta property="og:locale" content="it" />
   <meta property="og:url" content="{{ resource_url }}" />
