@@ -6,39 +6,39 @@ image: 'cog_og.png'
 </div>
 
 <div class="toc">
-  {% for item in site.articoli %}
-  <p class="page-date"><small>
-    {% assign m = item.date | date: "%-m" %}
-      {{ item.date | date: "%-d" }}
-        {% case m %}
-            {% when '1' %}Gennaio
-            {% when '2' %}Febbraio
-            {% when '3' %}Marzo
-            {% when '4' %}Aprile
-            {% when '5' %}Maggio
-            {% when '6' %}Giugno
-            {% when '7' %}Luglio
-            {% when '8' %}Agosto
-            {% when '9' %}Settembre
-            {% when '10' %}Ottobre
-            {% when '11' %}Novembre
-            {% when '12' %}Dicembre
-        {% endcase %}
-      {{ item.date | date: "%Y" }} 
-  </small></p>
-  <div class="article-title">
-  <h1 class="page-title">
+  {% for item in site.articoli reversed %}
+    <p class="page-date"><small>
+      {% assign m = item.date | date: "%-m" %}
+        {{ item.date | date: "%-d" }}
+          {% case m %}
+              {% when '1' %}Gennaio
+              {% when '2' %}Febbraio
+              {% when '3' %}Marzo
+              {% when '4' %}Aprile
+              {% when '5' %}Maggio
+              {% when '6' %}Giugno
+              {% when '7' %}Luglio
+              {% when '8' %}Agosto
+              {% when '9' %}Settembre
+              {% when '10' %}Ottobre
+              {% when '11' %}Novembre
+              {% when '12' %}Dicembre
+          {% endcase %}
+        {{ item.date | date: "%Y" }} 
+    </small></p>
+    <div class="article-title">
+    <h1 class="page-title">
       <a href="{{ site.baseurl }}{{ item.url }}">
         {{ item.title }}
       </a>      
-  </h1>
-  <h2 class="page-subtitle">{{ item.subtitle }}</h2>
-  </div>
-    {% if item.image %}
-    <img src="{{ site.images }}/{{ item.image }}" class="featured-img" alt="{{ item.title }}" title="{{ item.title }}">
-  {% endif %}
-    {{ item.content | truncatewords: 90 | markdownify }}
-    <h2 class="continue"><a href="{{ site.baseurl }}{{ item.url }}">Continua a leggere</a></h2>
+    </h1>
+    <h2 class="page-subtitle">{{ item.subtitle }}</h2>
+    </div>
+      {% if item.image %}
+        <img src="{{ site.images }}/{{ item.image }}" class="featured-img" alt="{{ item.title }}" title="{{ item.title }}">
+      {% endif %}
+      {{ item.excerpt | truncate: 999 }}
+      <h2 class="continue"><a href="{{ site.baseurl }}{{ item.url }}">Continua a leggere</a></h2>
   {% endfor %}
 </div>
 
